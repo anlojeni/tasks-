@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+{% block body %}
+     <div class='row'>
+	     <div class='col-5 mx-auto'>
+		     <h3>Edit Product</h3><hr>
+			 <form method='post' action='{{url_for("edit_product",id=datas.Id)}}'>
+			     <div class='form-group'>
+				     <label>ProductName</label>
+					 <input type='text' name='pname' required class='form-control' value='{{datas.ProductName}}'>
+				 </div>
+				 <div class='form-group'>
+				     <label>ManufactureDate</label>
+					 <input type='text' name='mdate' required class='form-control' value='{{datas.ManufactureDate}}'>
+				 </div>
+				 <div class='form-group'>
+				     <label>Quantity</label>
+					 <input type='text' name='quantity' required class='form-control' value='{{datas.Quantity}}'>
+				 </div>
+				 <input type='submit' value='submit' class='btn btn-primary'>
+					 
+			 </form>
+		 </div>
+	 </div>
+	 
+{% endblock %}

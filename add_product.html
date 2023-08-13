@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+{% block body %}
+     <div class='row'>
+	     <div class='col-5 mx-auto'>
+		     <h3>Grocery Details</h3><hr>
+			 <form method='post' action='{{("add_product")}}'>
+			     <div class='form-group'>
+				     <label>ProductName</label>
+					 <input type='text' name='pname' required class='form-control'>
+				 </div>
+				 <div class='form-group'>
+				     <label>ManufactureDate</label>
+					 <input type='text' name='mdate' required class='form-control'>
+				 </div>
+				 <div class='form-group'>
+				     <label>Quantity</label>
+					 <input type='text' name='quantity' required class='form-control'>
+				 </div>
+				 <input type='submit' value='submit' class='btn btn-primary'>
+					 
+			 </form>
+		 </div>
+	 </div>
+	 
+{% endblock %}
